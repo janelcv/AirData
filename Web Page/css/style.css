@@ -1,0 +1,64 @@
+html, body{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+p{
+    font-size: 16px;
+    line-height: 30px;
+}
+
+section{
+    padding: 48px 0;
+}
+
+#YMapsID{
+    width: 100%;
+    height: 400px;
+}
+
+#chart_div{
+    width: 100%;
+    height: 500px;
+}
+
+/* Navbar */
+.mainnav{
+    background-color: #ffffff !important;
+}
+
+.floatingNav {
+    border-bottom: 1px solid #eee;
+  }
+
+.navbar-brand img{
+    height: 40px;
+}
+
+/* Footer */
+.main-footer{
+    padding: 24px 0;
+    width: 100%;
+}
+
+.main-footer .footer-hr{
+    width: 100%;
+    height: 1;
+    border-color: #eee;
+}
+
+.main-footer .bottom-links a{
+    font-size: 14px;
+    color: #999;
+}
+
+/* About section */
+.about{
+    background-color: #f7f8f9;
+}
+
+.about img{
+    width: 160px;
+}
