@@ -10,6 +10,14 @@ p{
     line-height: 30px;
 }
 
+a{
+    color: #009DCF;
+}
+
+a:hover{
+    color: #007499;
+}
+
 section{
     padding: 48px 0;
 }
@@ -41,17 +49,21 @@ section{
 .main-footer{
     padding: 24px 0;
     width: 100%;
+    font-size: 14;
 }
 
 .main-footer .footer-hr{
     width: 100%;
     height: 1;
-    border-color: #eee;
+    border-color: #ebebeb;
 }
 
-.main-footer .bottom-links a{
+.main-footer .footer-social{
+    font-size: 20px;
+}
+
+.main-footer .footer-links{
     font-size: 14px;
-    color: #999;
 }
 
 /* About section */
