@@ -11,4 +11,5 @@ This is an open-data and open-source project aimed to collect information about 
 * [D3.js](https://d3js.org/) - A JavaScript library for manipulating documents based on data.
 * [Bootstrap](https://github.com/twbs/bootstrap) - The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.
 * [Chart.js](https://www.chartjs.org/) - Simple yet flexible JavaScript charting for designers & developers.
-* [Amazon AWS](https://aws.amazon.com/ru/) - Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services. Free to join, pay only for what you use.
+* [Moment.js](https://momentjs.com/) - A JavaScript library for date and time data manipulation.
+* [Amazon AWS](https://aws.amazon.com/ru/) - On-demand cloud computing platforms and APIs.
