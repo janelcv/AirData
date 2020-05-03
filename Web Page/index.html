@@ -59,6 +59,13 @@
   <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
+  <!-- iFrame -->
+  <script>
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+  }
+</script>
+
 </head>
 
 <body>
@@ -86,31 +93,39 @@
     </div>
   </nav>
 
+  <!-- About section -->
+  <section class="loading">
+    <div class="container text-center d-flex align-items-center justify-content-center">
+      <div class="loader mr-4"></div>
+      <p>Подождите пока идет загрузка визуализации</p>
+    </div>
+  </section>
+
   <!-- Chart section -->
-  <section>
-    <div class="container">
+  <section class="chart">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-12">
-          <canvas id="chart"></canvas>
+        <div class="col-lg-12 d-flex justify-content-center align-items-center">
+          <iframe id="power-bi" marginheight="0" src="https://app.powerbi.com/view?r=eyJrIjoiODJkNWIxYWYtN2U1MS00NzA5LWI2ZjEtNjU5MWRjZGM1MjA4IiwidCI6ImE5YzdmZWVhLTJiYTMtNDAyYi1hMmVlLTA0MmQ2YTRlMWVlYiIsImMiOjl9" frameborder="0" scrolling="no"></iframe>
         </div>
       </div>
     </div>
   </section>
 
-    <!-- About section -->
-    <section class="about">
-      <div class="container">
-        <div class="row d-flex align-items-center">
-          <div class="col-lg-2">
-            <img src="img/logo-piconly.svg" alt="Logo" class="img-fluid">
-          </div>
-          <div class="col-lg-10 flex-center">
-            <p>Airdata.kz — Open-data и open-source проект, направленный на сбор информации о состоянии воздуха</p>
-            <a class="btn btn-outline-primary" href="/about.html">Подробнее</a>
-          </div>
+  <!-- About section -->
+  <section class="about">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-2">
+          <img src="img/logo-piconly.svg" alt="Logo" class="img-fluid">
+        </div>
+        <div class="col-lg-10 flex-center">
+          <p>Airdata.kz — Open-data и open-source проект, направленный на сбор информации о состоянии воздуха</p>
+          <a class="btn btn-outline-primary" href="/about.html">Подробнее</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="footer bg-light main-footer">
@@ -151,10 +166,10 @@
             <li class="list-inline-item">
               <a class="text-muted small" data-toggle="modal" data-target="#exampleModalScrollable" href="#">Пользовательское соглашение</a>
             </li>
-            <li class="list-inline-item">&sdot;</li>
+            <!-- <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
               <a class="text-muted small" href="#">Политика конфиденциальности</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>

@@ -110,6 +110,23 @@ section{
     background-color: #f8f9fa;
 }
 
+/* Chart section */
+.chart{
+    padding: 0;
+}
+
+.chart iframe{
+    width: 90%;
+    height: 760px;
+}
+
+@media only screen and (max-width: 600px) {
+    .chart iframe{
+        width: 100%;
+        height: 320px;
+    }
+  }
+
 .about img{
     width: 128px;
 }
@@ -128,3 +145,35 @@ section{
 .modal-body{
     height: 80vh !important;
 }
+
+/* Loading */
+.loading{
+    padding: 16px 0;
+    background-color: #f8f9fa;
+    transition: 0.35s;
+}
+
+.loading p{
+    margin: 0;
+}
+
+.loader {
+    border: 4px solid #eee;
+    border-radius: 50%;
+    border-top: 4px solid #007499;
+    width: 24px;
+    height: 24px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
