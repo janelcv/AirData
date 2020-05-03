@@ -5,8 +5,7 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description"
-    content="AirData - мониторинг и анализ качества воздуха через сравнение различных источников. А также, анализ корреляции с разными факторами такими, как погода, пробки, уровень здоровья и т.д.">
+  <meta name="description" content="AirData.kz - мониторинг и анализ качества воздуха через сравнение различных источников. А также, анализ корреляции с разными факторами такими, как погода, пробки, уровень здоровья и т.д.">
   <meta name="author" content="AirData team">
 
   <title>AirData - мониторинг и анализ качества воздуха</title>
@@ -28,6 +27,8 @@
   <script src="scripts/libraries/moment-with-locales.js"></script>
   <script src="scripts/libraries/moment.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"></script>
+  <script src="scripts/pdf-viewer.js"></script>
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -35,7 +36,7 @@
   <link href="css/style.css" rel="stylesheet">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;700&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
     rel="stylesheet">
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
@@ -65,7 +66,7 @@
   <!-- Navigation -->
   <nav class="mainnav navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="img/logo.svg" alt="AirData logo"></a>
+      <a class="navbar-brand" href="/index.html"><img src="img/logo.svg" alt="AirData logo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -73,68 +74,17 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Главная
+            <a class="nav-link" href="/index.html">Главная
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">О проекте</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Контакты</a>
+            <a class="nav-link" href="/about.html">О проекте</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-
-  <!-- <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class='tableauPlaceholder' id='viz1588348949164'><noscript><a href='#'><img alt=' '
-                  src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ho&#47;HowAmericaUsesItsLand&#47;USAMap&#47;1_rss.png'
-                  style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
-              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-              <param name='embed_code_version' value='3' />
-              <param name='site_root' value='' />
-              <param name='name' value='HowAmericaUsesItsLand&#47;USAMap' />
-              <param name='tabs' value='yes' />
-              <param name='toolbar' value='yes' />
-              <param name='static_image'
-                value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ho&#47;HowAmericaUsesItsLand&#47;USAMap&#47;1.png' />
-              <param name='animate_transition' value='yes' />
-              <param name='display_static_image' value='yes' />
-              <param name='display_spinner' value='yes' />
-              <param name='display_overlay' value='yes' />
-              <param name='display_count' value='yes' />
-              <param name='filter' value='mobile=' /></object></div>
-          <script type='text/javascript'>
-            var divElement = document.getElementById('viz1588348949164');
-            var vizElement = divElement.getElementsByTagName('object')[0];
-            vizElement.style.width = '100%'; vizElement.style.height = '1070px';
-            var scriptElement = document.createElement('script');
-            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-            vizElement.parentNode.insertBefore(scriptElement, vizElement);
-          </script>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- About section -->
-  <section class="about">
-    <div class="container">
-      <div class="row d-flex align-items-center">
-        <div class="col-lg-3">
-          <img src="img/logo-piconly.svg" alt="Logo" class="img-fluid">
-        </div>
-        <div class="col-lg-9 flex-center">
-          <p>Airdata — Open-data и open-source проект, направленный на сбор информации о состоянии воздуха в г.Алматы путем замера частиц PM 2.5, анализ данных и выявление факторов, на которые потенциально может влиять загрязненный воздух.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Chart section -->
   <section>
@@ -144,11 +94,23 @@
           <canvas id="chart"></canvas>
         </div>
       </div>
-      <!-- <div class="row">
-        <div id="YMapsID"></div>
-      </div> -->
     </div>
   </section>
+
+    <!-- About section -->
+    <section class="about">
+      <div class="container">
+        <div class="row d-flex align-items-center">
+          <div class="col-lg-2">
+            <img src="img/logo-piconly.svg" alt="Logo" class="img-fluid">
+          </div>
+          <div class="col-lg-10 flex-center">
+            <p>Airdata.kz — Open-data и open-source проект, направленный на сбор информации о состоянии воздуха</p>
+            <a class="btn btn-outline-primary" href="/about.html">Подробнее</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
   <!-- Footer -->
   <footer class="footer bg-light main-footer">
@@ -157,40 +119,37 @@
         <div class="col-lg-6 text-center text-sm-left footer-links">
           <ul class="list-inline mb-2">
             <li class="list-inline-item">
-              <a href="#">Главная</a>
+              <a href="/index.html">Главная</a>
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a href="#">О проекте</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="#">Контакты</a>
+              <a href="/about.html">О проекте</a>
             </li>
           </ul>
         </div>
-        <div class="col-lg-6 text-center text-lg-right footer-social">
+        <div class="col-lg-6 text-center text-sm-right footer-social">
           <ul class="list-inline mb-2">
             <li class="list-inline-item">
-              <a href="#">
-                <i class='bx bxl-telegram bx-lg'></i>
-              </a>
+              <a href="info@airdata.kz">info@airdata.kz</a>
             </li>
+            <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a href="#">
+              <a href="https://github.com/janelcv/AirData">
                 <i class='bx bxl-github bx-lg'></i>
               </a>
             </li>
           </ul>
         </div>
-        <hr class="footer-hr">
+      </div>
+      <hr class="footer-hr">
+      <div class="row">
         <div class="col-lg-6 text-center text-lg-left">
-          <p class="text-muted small mb-4 mb-lg-0">&copy; AirData 2020. All Rights Reserved.</p>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; AirData 2020</p>
         </div>
         <div class="col-lg-6 text-center text-lg-right bottom-links">
           <ul class="list-inline mb-2">
             <li class="list-inline-item">
-              <a class="text-muted small" href="#">Пользовательское соглашение</a>
+              <a class="text-muted small" data-toggle="modal" data-target="#exampleModalScrollable" href="#">Пользовательское соглашение</a>
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
@@ -202,7 +161,24 @@
     </div>
   </footer>
 
-  <!-- <script src="scripts/map.js"></script> -->
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalScrollableTitle">Пользовательское соглашение</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="user-agreement-pdf"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PDF Viewer -->
+  <script>pdf("/pdf/user-agreement-airdata.kz.pdf","#user-agreement-pdf")</script>
+
   <script src="scripts/charts.js"></script>
   <script src="scripts/misc.js"></script>
 

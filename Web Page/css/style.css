@@ -2,12 +2,24 @@ html, body{
     width: 100%;
     padding: 0;
     margin: 0;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4{
+    font-weight: 700;
 }
 
 p{
     font-size: 16px;
     line-height: 30px;
+}
+
+ul {
+    padding: 0 0 0 20px;
+}
+
+ul li::before {
+    color: #007499;
 }
 
 a{
@@ -20,6 +32,27 @@ a:hover{
 
 section{
     padding: 48px 0;
+}
+
+.btn.btn-outline-primary{
+    color: #007499;
+    border-color: #007499;
+    font-size: 14px;
+    outline: none;
+    box-shadow: none;
+}
+
+.btn.btn-outline-primary:hover,
+.btn.btn-outline-primary:active,
+.btn.btn-outline-primary:focus,
+.btn.btn-outline-primary:target,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.btn-outline-primary:not(:disabled):not(.disabled):active{
+    color: #fff;
+    background-color: #007499;
+    border-color: #007499;
+    outline: none;
+    box-shadow: none;
 }
 
 #YMapsID{
@@ -47,6 +80,8 @@ section{
 
 /* Footer */
 .main-footer{
+    background-color: #fff !important;
+    border-top: 1px solid #eee;
     padding: 24px 0;
     width: 100%;
     font-size: 14;
@@ -58,7 +93,11 @@ section{
     border-color: #ebebeb;
 }
 
-.main-footer .footer-social{
+.main-footer .footer-social a{
+    font-size: 14px;
+}
+
+.main-footer .footer-social i{
     font-size: 20px;
 }
 
@@ -68,9 +107,24 @@ section{
 
 /* About section */
 .about{
-    background-color: #f7f8f9;
+    background-color: #f8f9fa;
 }
 
 .about img{
-    width: 160px;
+    width: 128px;
+}
+
+/* Support */
+.support img{
+    width: 96px;
+}
+
+/* Thanks section */
+.thanks{
+    background-color: #f8f9fa;
+}
+
+/* Modal */
+.modal-body{
+    height: 80vh !important;
 }

@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/Bg0DpOt.png" width="220px">
+<img src="https://i.imgur.com/xqERkVF.png" width="220px">
 
 This is an open-data and open-source project aimed to collect information about the air quality in Almaty by measuring PM 2.5 particles. Website allows users to compare air data with other statistical information, such as traffic, weather etc.
 
