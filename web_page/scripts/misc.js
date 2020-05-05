@@ -1,8 +1,3 @@
-const iframe = document.querySelector('#power-bi');
-iframe.onload = () => {
-    document.querySelector('.loading').style.display = 'none';
-}
-
 $(window).scroll(function() {
     if ($(window).scrollTop() > 10) {
         $('.mainnav').addClass('floatingNav');
@@ -12,3 +7,8 @@ $(window).scroll(function() {
         $('.mainnav').removeClass('fixed-top');
     }
 });
+
+const iframe = document.querySelector('#power-bi');
+iframe.onload = () => {
+    document.querySelector('.loading').style.display = 'none';
+}
