@@ -4,7 +4,7 @@ This is an open-data and open-source project aimed to collect information about 
 
 # Data sources:
 * [Airkaz](http://airkaz.org/) - Kazakhstan air quality monitoring.
-* [RSE "Kazhydromet"]https://www.kazhydromet.kz/) - Ministry of Ecology, Geology and Natural Resources of the Republic of Kazakhstan
+* [RSE Kazhydromet](https://www.kazhydromet.kz/) - Ministry of Ecology, Geology and Natural Resources of the Republic of Kazakhstan
 * [IQAir](https://www.iqair.com/) - Real-time air quality report and air pollution forecast.
 * [World Air Quality Index](https://aqicn.org/) - Air Pollution in the World.
 
