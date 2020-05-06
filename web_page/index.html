@@ -58,6 +58,32 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165685473-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-165685473-1');
+  </script>
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(62588494, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/62588494" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
@@ -65,7 +91,7 @@
   <!-- Navigation -->
   <nav class="mainnav navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="/index.html"><img src="img/logo.svg" alt="AirData logo"></a>
+      <a class="navbar-brand" href="/"><img src="img/logo.svg" alt="AirData logo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -73,7 +99,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/index.html">Главная
+            <a class="nav-link" href="/">Главная
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -85,7 +111,7 @@
     </div>
   </nav>
 
-  <!-- About section -->
+  <!-- Loading section -->
   <section class="loading">
     <div class="container text-center d-flex align-items-center justify-content-center">
       <div class="loader mr-4"></div>
@@ -98,13 +124,13 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12 d-flex justify-content-center align-items-center">
-          <iframe id="power-bi" marginheight="0" src="https://app.powerbi.com/view?r=eyJrIjoiMjhkMWFiMWQtZTg1OC00Y2RmLTg3YWQtNmNiMjcwOWY3ZmRlIiwidCI6ImE5YzdmZWVhLTJiYTMtNDAyYi1hMmVlLTA0MmQ2YTRlMWVlYiIsImMiOjl9" frameborder="0" scrolling="no"></iframe>
+          <iframe id="power-bi" marginheight="0" src="https://app.powerbi.com/view?r=eyJrIjoiZDE3ZWE3ZGYtNDA2OS00MDQ1LTgzNjctNjU0OTFhODVkM2Y3IiwidCI6ImE5YzdmZWVhLTJiYTMtNDAyYi1hMmVlLTA0MmQ2YTRlMWVlYiIsImMiOjl9" frameborder="0" scrolling="no"></iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About section -->
+  <!-- about.html section -->
   <section class="about">
     <div class="container">
       <div class="row d-flex align-items-center">
@@ -128,7 +154,7 @@
         <div class="col-lg-6 text-center text-sm-left footer-links">
           <ul class="list-inline mb-2">
             <li class="list-inline-item">
-              <a href="/index.html">Главная</a>
+              <a href="/">Главная</a>
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
@@ -139,7 +165,7 @@
         <div class="col-lg-6 text-center text-sm-right footer-social">
           <ul class="list-inline mb-2">
             <li class="list-inline-item">
-              <a href="info@airdata.kz">info@airdata.kz</a>
+              <a href="mailto:info@airdata.kz">info@airdata.kz</a>
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
@@ -188,7 +214,7 @@
   <!-- PDF Viewer -->
   <script>pdf("/pdf/user-agreement-airdata.kz.pdf","#user-agreement-pdf")</script>
 
-  <script src="scripts/charts.js"></script>
+  <!-- <script src="scripts/charts.js"></script> -->
   <script src="scripts/misc.js"></script>
 
 </body>
