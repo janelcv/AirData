@@ -115,17 +115,53 @@ section{
     padding: 0;
 }
 
-.chart iframe{
-    width: 100%;
-    height: 800px;
+.chart .col-lg-12 {
+    overflow-x: hidden;
+    padding-top: 60%;
+    position: relative;
 }
 
-@media only screen and (max-width: 600px) {
-    .chart iframe{
+.chart iframe{
+    /* width: 100%;
+    height: 800px; */
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/* Chart-mobile section */
+.chart-mobile{
+    padding: 0 !important;
+}
+
+.chart-mobile iframe{
+    width: 100%;
+    height: 1200px;
+}
+
+@media only screen and (max-width: 420px) {
+    .chart-mobile iframe{
         width: 100%;
-        height: 320px;
+        height: 960px;
     }
-  }
+}
+
+@media only screen and (max-width: 360px) {
+    .chart-mobile iframe{
+        width: 100%;
+        height: 790px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .chart-mobile iframe{
+        width: 100%;
+        height: 740px;
+    }
+}
 
 .about img{
     width: 128px;
@@ -144,6 +180,13 @@ section{
 /* Modal */
 .modal-body{
     height: 80vh !important;
+}
+
+/* Links */
+.links{
+    padding: 8px 0;
+    background-color: #f8f9fa;
+    display: none;
 }
 
 /* Loading */
@@ -165,15 +208,15 @@ section{
     height: 24px;
     -webkit-animation: spin 2s linear infinite; /* Safari */
     animation: spin 2s linear infinite;
-  }
-  
-  /* Safari */
-  @-webkit-keyframes spin {
+}
+
+/* Safari */
+    @-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(360deg); }
-  }
-  
-  @keyframes spin {
+}
+
+@keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  }
+}

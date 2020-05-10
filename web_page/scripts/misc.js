@@ -8,7 +8,8 @@ $(window).scroll(function() {
     }
 });
 
-const iframe = document.querySelector('#power-bi');
+const iframe = document.querySelector('.power-bi');
 iframe.onload = () => {
     document.querySelector('.loading').style.display = 'none';
+    document.querySelector('.links').style.display = 'block';
 }
