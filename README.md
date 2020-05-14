@@ -1,10 +1,8 @@
 <img src="https://i.imgur.com/xqERkVF.png" width="220px">
 
-This is an open-data and open-source project aimed to collect information about the air quality in Almaty by measuring PM 2.5 particles. Website allows users to compare air data with other statistical information, such as traffic, weather etc.
+This is an open-data and open-source project aimed to collect information about the air quality in Almaty and Nur-Sultan by measuring PM 2.5 particles. Website allows users to compare air data with other statistical information, such as traffic, weather etc.
 
 # Data sources:
-* [Airkaz](http://airkaz.org/) - Kazakhstan air quality monitoring.
-* [RSE Kazhydromet](https://www.kazhydromet.kz/) - Ministry of Ecology, Geology and Natural Resources of the Republic of Kazakhstan
 * [IQAir](https://www.iqair.com/) - Real-time air quality report and air pollution forecast.
 * [World Air Quality Index](https://aqicn.org/) - Air Pollution in the World.
 
